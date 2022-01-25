@@ -3,7 +3,7 @@ module.exports = function check(str, bracketsConfig) {
   let tempString = str;
   while (pairsSubsrts.some((pair) => tempString.includes(pair))) {
     pairsSubsrts.forEach((substr) => {
-      tempString = tempString.replaceAll(substr, "")
+      tempString = tempString.replace(substr, "")
     })
   }
   return !tempString.length;
